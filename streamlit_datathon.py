@@ -22,7 +22,7 @@ import spacy
 from wordcloud import WordCloud
 
 nltk.download('popular')
-nlp = spacy.load('en_core_web_sm')
+
 ######################################################################
 ############################### PAGE 1 ###############################
 
@@ -158,7 +158,7 @@ def page3():
             tokens_clean.append(words)
     
     # python -m spacy download en_core_web_sm # pour télécharger le module
-    # nlp = spacy.load('en_core_web_sm')
+    nlp = spacy.load('en_core_web_sm')
 
 ############ nuage de mot ############
     
