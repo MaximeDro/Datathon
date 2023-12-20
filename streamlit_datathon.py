@@ -173,7 +173,7 @@ def page3():
     plt.axis("off")
     plt.margins(x=0, y=0)
     plt.show()
-    # st.pyplot(plt.gcf())
+    st.pyplot(plt.gcf())
 
     # Enregistrer l'image du nuage de mots dans un fichier temporaire
     # image_file = "wordcloud_temp_file.png"
