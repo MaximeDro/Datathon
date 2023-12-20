@@ -94,27 +94,27 @@ def page2():
     default_value_index = list(set(df_gazes['country'])).index("World")
     country_name = st.selectbox('Select a country:', list(set(df_gazes['country'])), index=default_value_index)
 
-    
+    liste_gazes = function.get_gazes_by_iso_code(df_gazes,country_name)
     ######### GRAPHIQUE EMISSIONS
     fig, axes = plt.subplots(ncols = 3, figsize = [15,5])
-    sns.lineplot(x = function.get_gazes_by_iso_code(df_gazes,country_name)[0].keys(), 
-                 y = function.get_gazes_by_iso_code(df_gazes,country_name)[0].values(), 
+    sns.lineplot(x = liste_gazes[0].keys(), 
+                 y = liste_gazes[0].values(), 
                  ax = axes[0],
                  c = 'orange')
     axes[0].set_xlabel('Year')
     axes[0].set_ylabel('CO2 Emissions')
     axes[0].set_title(f'CO2 Emissions in {country_name}')
 
-    sns.lineplot(x = function.get_gazes_by_iso_code(df_gazes,country_name)[1].keys(), 
-                 y = function.get_gazes_by_iso_code(df_gazes,country_name)[1].values(), 
+    sns.lineplot(x = liste_gazes[1].keys(), 
+                 y = liste_gazes[1].values(), 
                  ax = axes[1],
                  c = 'green')
     axes[1].set_xlabel('Year')
     axes[1].set_ylabel('CH4 Emissions')
     axes[1].set_title(f'CH4 Emissions in {country_name}')
 
-    sns.lineplot(x = function.get_gazes_by_iso_code(df_gazes,country_name)[2].keys(), 
-                 y = function.get_gazes_by_iso_code(df_gazes,country_name)[2].values(), 
+    sns.lineplot(x = liste_gazes[2].keys(), 
+                 y = liste_gazes[2].values(), 
                  ax = axes[2],
                  c = 'red')
     axes[2].set_xlabel('Year')
