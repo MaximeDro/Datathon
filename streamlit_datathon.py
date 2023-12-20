@@ -173,13 +173,14 @@ def page3():
     plt.axis("off")
     plt.margins(x=0, y=0)
     plt.show()
+    st.pyplot(plt.gcf())
 
     # Enregistrer l'image du nuage de mots dans un fichier temporaire
-    image_file = "wordcloud_temp_file.png"
-    plt.savefig(image_file, bbox_inches="tight", pad_inches=0)
-    plt.close()
-    # Afficher le nuage de mots dans Streamlit en utilisant st.image
-    st.image(image_file)
+    # image_file = "wordcloud_temp_file.png"
+    # plt.savefig(image_file, bbox_inches="tight", pad_inches=0)
+    # plt.close()
+    # # Afficher le nuage de mots dans Streamlit en utilisant st.image
+    # st.image(image_file)
 
 ######################################################################
 ############################### PAGE 4 ###############################
