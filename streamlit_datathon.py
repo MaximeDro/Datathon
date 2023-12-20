@@ -192,6 +192,7 @@ def page4():
     st.write("https://www.ecologie.gouv.fr/comprendre-giec")    
     st.write("https://datahub.io/collections/climate-change")
     st.write("https://data.world/datasets/global-warming")
+    st.write("https://odyssey.wildcodeschool.com/MAGUEULE")
     st.write("Article updated 20/12/2023")
     st.write("Author: Geraldo del rive")
 
